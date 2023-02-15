@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <form action="" method="POST" class="form" id="formInputFile" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" id="inputFile" name="pdf_file">
+                <button type="button" class="btn" id="inputFileButton">Жмык</button>
+                
+                <a href="/directory">Справочник</a>
+            </form>
+        </div>
+        <div class="content2">
+            <div class="block_1 d-flex">
+                <div class="text_1" id="text_1">
+                </div>
+                <div class="text_2" id="text_2">
+                </div>
+            </div>
+
+            <div class="block_2">
+                <div class="text_3">
+                    <span id="span_text_3"></span>
+                    <input type="text" class="input_text_lexem" id = "input_text_lexem">
+                </div>
+                <div class="text_4">
+                    <div class="min_block_text_4">
+                        <span>Часть речи:</span>
+                        <input type="text" name="" id="" class="inputLexemValues">
+                    </div>
+                    <div class="min_block_text_4">
+                        <span>Число:</span>
+                        <input type="text" name="" id="" class="inputLexemValues">
+                    </div>
+                    <div class="min_block_text_4">
+                        <span>Род:</span>
+                        <input type="text" name="" id="" class="inputLexemValues">
+                    </div>
+                    <div class="min_block_text_4">
+                        <span>Падеж:</span>
+                        <input type="text" name="" id="" class="inputLexemValues"> 
+                    </div>
+                </div>
+                <button type="button" id="btnsave">
+                    Сохранить
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>
